@@ -1,5 +1,6 @@
 # Terraform
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs/
+[Terraform - AWS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/)
+
 ### Commands:
 1. terraform init
 2. terraform validate
@@ -12,5 +13,5 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/
 terraform destroy -target aws_instance.abc12
 
 ### Auto approve
-terraform apply -auto-approve
-terraform destroy -auto-approve
+1. terraform apply -auto-approve
+2. terraform destroy -auto-approve
