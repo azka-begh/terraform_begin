@@ -14,5 +14,5 @@ output "url" {
 }
 //Prints elastic ip details
 output "details" {
-  value = "aws_eip.myip"
+  value = aws_eip.myip
 }
