@@ -1,4 +1,3 @@
-# variables.tf
 variable "ami" {
   type    = string
   default = "ami-0078ef784b6fa1ba4"
@@ -20,6 +19,6 @@ resource "aws_instance" "myinstance" {
   instance_type = var.instance_type
   count         = length(var.servers)
   tags = {
-    Name = var.sandboxes[count.index]
+    Name = var.servers[count.index]
   }
 }
