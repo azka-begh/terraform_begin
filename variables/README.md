@@ -7,5 +7,5 @@ terraform plan -var "variable_name=variable_value"
 terraform plan -var-file="file-name.tfvars"
 
 ## Env Variables:
-setx TF_VAR_variable_name variable_value (Windows)
-export TF_VAR_variable_name="variable_value" (Linux/Mac)
+1. setx TF_VAR_variable_name variable_value (Windows)
+2. export TF_VAR_variable_name="variable_value" (Linux/Mac)
