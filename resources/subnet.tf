@@ -4,18 +4,9 @@ provider "aws" {
 
 resource "aws_vpc" "my_terraform_vpc" {
   cidr_block       = "10.0.0.0/16"
-
   tags = {
     Name = "tf_vpc"
   }
-}
-
-output "vpc_tf_id" {
-    value = aws_vpc.my_terraform_vpc.id
-}
-
-output "vpc_tf_cidr" {
-    value = aws_vpc.my_terraform_vpc.cidr_block
 }
 
 resource "aws_subnet" "tf_vpc_subnet1" {
