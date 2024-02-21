@@ -7,8 +7,9 @@ data "aws_ami" "app_ami" {
   owners      = ["amazon"]
 
   filter {
+# Find ami whose name (actual name and not a tag) contains hvm.
     name   = "name"
-    values = ["amzn2-ami-hvn*"]
+    values = ["*hvm*"]
   }
 }
 
