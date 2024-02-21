@@ -1,4 +1,11 @@
-# Terraform Variables
+# Terraform Variable Definition Files
+
+Terraform also automatically loads a number of variable definitions files if they are present: Files named exactly terraform.tfvars or terraform.tfvars.json . Any files with names ending in .auto.tfvars or .auto.tfvars.json .
+
+## Types of Variables
+1. Local Variables
+2. Input Variables
+3. Output Variables
 
 ## CLI Flag
 terraform plan -var "variable_name=variable_value"
