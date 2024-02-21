@@ -2,20 +2,6 @@ provider "aws" {
   region = "us-east-2"
 }
 
-variable "mylist" {
-  type    = list(any)
-  default = ["t2.micro", "t3.micro", "t2.medium"]
-}
-
-variable "mymap" {
-  type = map(any)
-  default = {
-    us-east-2  = "t2.micro"
-    us-east-1  = "t2.medium"
-    ap-south-1 = "t3.micro"
-  }
-}
-
 resource "aws_instance" "myinstance1" {
   ami           = "ami-05fb0b8c1424f266b"
   instance_type = var.mylist[1]
