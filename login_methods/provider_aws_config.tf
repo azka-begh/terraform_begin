@@ -13,7 +13,7 @@ provider "aws" {
     secret_key = "ENTER SECRET ACCESS KEY"
 }
 
-# Shared Config Files (This creates an issue as people using terraform might have their credentials stored at a different location)
+# Shared Config Files (This creates an issue as people using awscli might have their credentials stored at a different location)
 
 provider "aws" {
   shared_config_files      = ["/Users/tf_user/.aws/conf"]
