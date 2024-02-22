@@ -1,6 +1,6 @@
 # Dynamic Blocks in Terraform
 
-[Dynamic Blocks](https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks)
+[Dynamic Blocks](https://kodekloud.com/blog/terraform-dynamic-block/)
 
 
 Some top-level block types, like the resource block, have arguments in the form of name = expression and also have nested blocks as arguments. Terraform dynamic blocks are commonly used to dynamically construct these repeated nested block arguments in resource-type blocks.
