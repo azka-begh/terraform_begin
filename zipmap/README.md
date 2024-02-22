@@ -14,3 +14,4 @@ terraform console
   "b" = 2
 }
 ```
+![7656022B-7340-47EE-8683-090AE3CB7B76_1_201_a](https://github.com/begh-azka/terraform_aws/assets/97597065/8b74cbec-115b-4a92-8652-44e765a4a058)
