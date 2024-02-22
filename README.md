@@ -8,10 +8,15 @@
 4. terraform apply
 5. terraform destroy
 6. terraform fmt
-
+7. terraform show
+   
 ### Destroy a single resource
-terraform destroy -target aws_instance.abc12
-
+```
+terraform destroy -target RESOURCE_TYPE.NAME
+```
 ### Auto approve
 1. terraform apply -auto-approve
 2. terraform destroy -auto-approve
+
+### Recreating a Particular resource
+```terraform apply -replace="RESOURCE_TYPE.NAME"```
