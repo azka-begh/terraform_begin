@@ -59,3 +59,4 @@ terraform apply -replace="RESOURCE_TYPE.NAME"
   terraform plan -out=/path/to/file
   terraform apply /path/to/file
   ```
+[Useful Blocks and Functions](https://linumary.medium.com/learning-terraform-with-real-world-scenarios-part-2-e5749e8e6f8e)
