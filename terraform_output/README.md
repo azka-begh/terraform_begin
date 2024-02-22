@@ -1,11 +1,11 @@
 # Terraform Output
 
-You can check the value of output variable in 2 ways:
-1. Terraform apply (even if there are no new changes)
-2. Checking the State File
+You can check the value of an output variable in 2 ways after you have alraedy applied the changes:
+1. Terraform apply (It will just print the output variable values)
+2. Checking the State File (Might have a lot of information)
 
 **The terraform output command is used to extract the value of an output variable from the state file.**
 
 ```
-terraform output output_variable_names
+terraform output output_variable_name
 ```
