@@ -10,4 +10,5 @@ Terraform settings are gathered together into terraform blocks:
    If the running version of Terraform does not match the constraint specified, Terraform will produce an error and exit without taking any further actions.
 
 3. **Provider Version:**
+   
    The **required_providers** block specifies all of the providers required by the current module, mapping each local provider name to a source address and a version constraint.
