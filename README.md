@@ -21,8 +21,11 @@ A provider is responsible for understanding API interactions and exposing resour
 Configuration files are a set of files used to describe infrastructure in Terraform and have the file extensions .tf and .tf.json.
 ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/0bf3e4a5-1619-4159-8641-333302ba3ee3)
 
-### State: 
-Terraform records information about what infrastructure is created in a Terraform state file. With the state file, Terraform is able to find the resources it created previously, supposed to manage and update them accordingly.
+### Terraform State: 
+Terraform records information about what infrastructure is created in a Terraform state file. With the state file, Terraform is able to find the resources it created previously, supposed to manage and update them accordingly. The terraform state file, by default, is named **terraform.tfstate** and is held in the same directory where Terraform is run.
+
+### Terraform lock file:
+The Terraform lockfile is used by Terraform to track the desired state of your infrastructure. The lock file is always named **.terraform.lock.hcl**, and this name is intended to signify that it is a lock file for various items that Terraform caches in the .terraform subdirectory of your working directory. Terraform recommends including the Dependency Lock File file in your version control repository, alongside your infrastructure code. You can generate or update this file by running ```terraform init``` locally and committing it into your repository.
 
 ### Commands:
 ```
@@ -33,6 +36,7 @@ Terraform records information about what infrastructure is created in a Terrafor
 5. terraform destroy
 6. terraform fmt
 7. terraform show
+8. terraform refresh (Use with Caution!)
 ```   
 ### Destroy a single resource
 ```
