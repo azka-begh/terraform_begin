@@ -4,9 +4,9 @@ When you have a large infrastructure, you will face issues related to API limits
 
 It is better to switch to smaller configuration files (kept in separate directories) where each can be applied independently.
 
-<!--- 
+{::comment}
 Not meant to be used in prod
--->
+{:/comment}
 
 We can prevent terraform from querying the current state during operations like terraform plan.
 This can be achieved with the ```-refresh=false``` flag. 
