@@ -13,3 +13,6 @@ We can also pick and choose which infrastructure objects we want to change, crea
 ```
 terraform plan -target=aws_instance.resource_name
 ```
+{:: comment}
+comment text
+{:/comment}
