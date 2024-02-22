@@ -30,3 +30,5 @@ terraform graph | dot -Tsvg > graph.svg
 terraform graph | dot -Tpdf > graph.pdf
 terraform graph -type=plan | dot -Tpng -o graph.png
 ```
+![image](https://github.com/begh-azka/terraform_aws/assets/97597065/bf32cd66-3b02-4d1d-835a-09a9d63b46b7)
+
