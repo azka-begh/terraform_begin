@@ -51,3 +51,11 @@ terraform destroy -target RESOURCE_TYPE.NAME
 ```
 terraform apply -replace="RESOURCE_TYPE.NAME"
 ```
+## Terraform Plan File
+
+* The generated terraform plan can be saved in a specific location.
+* This plan can then be used with ```terraform apply``` to make sure that only the desired changes in the plan are applied to our infrastructure.
+  ```
+  terraform plan -out=/path/to/file
+  terraform apply /path/to/file
+  ```
