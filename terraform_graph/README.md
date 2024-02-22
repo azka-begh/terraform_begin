@@ -32,3 +32,11 @@ terraform graph -type=plan | dot -Tpng -o graph.png
 ```
 ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/bf32cd66-3b02-4d1d-835a-09a9d63b46b7)
 
+## Terraform Plan File
+
+* The generated terraform plan can be saved in a specific location.
+* This plan can then be used with ```terraform apply``` to make sure that only the desired changes in the plan are applied to our infrastructure.
+  ```
+  terraform plan -out=/path/to/file
+  terraform apply /path/to/file
+  ```
