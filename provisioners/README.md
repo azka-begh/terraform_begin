@@ -7,8 +7,16 @@
 Terraform provisioners have nothing in common with providers, they allow the execution of various commands or scripts on either local or remote machines, and they can also transfer files from a local environment to a remote one. 
 
 There are three available provisioners:
-**file** (used for copying), **local-exec** (used for local operations), **remote-exec** (used for remote operations). 
+1. **file** (used for copying)
+2. **local-exec** (used for local operations)
+3. **remote-exec** (used for remote operations).
+   
 The file and remote-exec provisioners need a connection block to be able to do the remote operations.
 
-Example:
-On creation of web-server, execute a script which installs Nginx on that server.
+![image](https://github.com/begh-azka/terraform_aws/assets/97597065/5c8ee080-3587-4bcb-ba86-31a98b52dfea)
+
+## Local-Exec Provisioner
+The local-exec provisioner allows executing commands locally on the machine running Terraform. It is commonly used for tasks that don’t require remote access, like running scripts or initializing resources. This provisioner provides flexibility and can be integrated with various scripting languages.
+
+## Remote-Exec Provisioner
+The remote-exec provisioner runs commands remotely on the created resource. It establishes an SSH or WinRM connection to the resource and executes the specified commands. This provisioner is suitable for tasks that require remote execution, such as configuring software or managing the infrastructure.
