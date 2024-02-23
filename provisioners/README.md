@@ -8,7 +8,7 @@ Terraform provisioners have nothing in common with providers, they allow the exe
 
 There are three available provisioners:
 **file** (used for copying), **local-exec** (used for local operations), **remote-exec** (used for remote operations). 
-\The file and remote-exec provisioners need a connection block to be able to do the remote operations.
+The file and remote-exec provisioners need a connection block to be able to do the remote operations.
 
 Example:
 On creation of web-server, execute a script which installs Nginx on that server.
