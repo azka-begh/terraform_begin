@@ -25,12 +25,12 @@ Terraform allows us to include meta-arguments within the resource block which al
 
 There are 5 Meta-Arguments in Terraform which are as follows:
 1. **depends_on:**
-   There are rare scenarios where Terraform cannot infer dependencies between resources. In these cases, you will need to create an explicit dependency. Terraform depends_on allows you to create an explicit dependency between two resources.
+   * There are rare scenarios where Terraform cannot infer dependencies between resources. In these cases, you will need to create an explicit dependency. Terraform depends_on allows you to create an explicit dependency between two resources.
 2. **count:**
-   The count meta-argument accepts a whole number. It is used to create multiple instances of an infrastructure object when it is used in a resource or module block. Also, when used in a data block, it fetches multiple instances of an object.
+   * The count meta-argument accepts a whole number. It is used to create multiple instances of an infrastructure object when it is used in a resource or module block. Also, when used in a data block, it fetches multiple instances of an object.
 3. **for_each:**
-   The for_each meta-argument creates multiple instances of a module or resource block. However, instead of specifying the number of resources, the for_each meta-argument accepts a map or a set of strings.
+   * The for_each meta-argument creates multiple instances of a module or resource block. However, instead of specifying the number of resources, the for_each meta-argument accepts a map or a set of strings.
 4. **provider:**
-   The provider meta-argument specifies which provider to be used for a resource. This is useful when you are using multiple providers which is usually used when you are creating multi-region resources.
+   * The provider meta-argument specifies which provider to be used for a resource. This is useful when you are using multiple providers which is usually used when you are creating multi-region resources.
 5. **lifecycle:**
-    The lifecycle meta-argument can be used to specify how Terraform should handle the creation, modification, and destruction of resources.
+    * The lifecycle meta-argument can be used to specify how Terraform should handle the creation, modification, and destruction of resources.
