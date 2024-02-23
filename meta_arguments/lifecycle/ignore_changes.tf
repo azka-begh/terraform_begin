@@ -11,7 +11,6 @@ resource "aws_instance" "ec2-b" {
   }
 
   lifecycle {
-     ignore_changes = [tags]
- }
+    ignore_changes = [tags]
+  }
 }
-
