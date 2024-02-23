@@ -10,7 +10,6 @@ resource "aws_instance" "ec2-b" {
     Name = "my_vm"
   }
 
-  #meta-argument -> lifeycle
   lifecycle {
      ignore_changes = [tags]
  }
