@@ -24,4 +24,8 @@ Jan 02, 2018
 > formatdate("HH:mmaa", "2018-01-02T23:12:01Z")
 11:12pm
 ```
-2. **timestamp:** 
+2. **timestamp:** # timestamp function returns a UTC timestamp string in RFC 3339 format.
+```
+> timestamp()
+"2024-02-21T11:00:43Z"
+```
