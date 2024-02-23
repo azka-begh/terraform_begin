@@ -1,4 +1,4 @@
-# LIFECYCLE
+# Lifecycle meta-argument
 
 There are several attributes available for use with the lifecycle meta-argument:
 
@@ -19,4 +19,10 @@ There are several attributes available for use with the lifecycle meta-argument:
    * If all attributes are to be ignored, then the all keyword can be used. This means that Terraform will never update the object but will be able to create or destroy it.
 
 4. **replace_triggered_by:**
-   * This option forces the replacement of a resource when the specified items of the resource are changed. 
+   * This option forces the replacement of a resource when the specified items of the resource are changed.
+
+5. **precondition:**
+   * The precondition block is used to ensure a certain condition is met before the resource is created.
+
+6. **postcondition:**
+   * The postcondition block is used to execute specific actions or checks after the resource is created.
