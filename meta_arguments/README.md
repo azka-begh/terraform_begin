@@ -2,7 +2,7 @@
 
 ## How Terraform Applies a Configuration?
 
-* Creates resources that exist in the configuartion files but are not associated with a real infrastructure object in the state file.
+* Creates resources that exist in the configuration files but are not associated with a real infrastructure object in the state file.
 
 * Destroys resources that exist in the state file but no longer exist in the config files.
 
