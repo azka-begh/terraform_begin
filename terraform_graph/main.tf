@@ -5,13 +5,13 @@ provider "aws" {
 }
 
 resource "aws_instance" "myec2_instance" {
-  ami = "ami-082b5a644766e0e6f"
+  ami           = "ami-082b5a644766e0e6f"
   instance_type = "t2.micro"
 }
 
 resource "aws_eip" "eip" {
   instance = aws_instance.myec2"_instance.id
-  vpc = true
+  vpc      = true
 }
 
 resource "aws_security_group" "allow_tls" {
