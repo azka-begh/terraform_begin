@@ -10,14 +10,39 @@ The count meta-argument accepts a whole number. It is used to create multiple in
 
 ## Count.index
 The count.index attribute represents the unique index number of each object created using the count meta-argument. 
+```
+variable "ami" {
+  type    = string
+  default = "ami-0078ef784b6fa1ba4"
+}
 
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+}
+
+variable "servers" {
+  type    = list(string)
+  default = ["server_one", "server_two", "server_three"]
+}
+
+resource "aws_instance" "myinstance" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  count         = length(var.servers)
+  tags = {
+    Name = var.servers[count.index]
+  }
+}
+
+```
 ## Challenges with count
 * Even if the count meta-argument is used to provision multiple infrastructure objects in Terraform; it is recommended to use it when provisioning objects that are almost identical to avoid unexpected infrastructural changes during a modification.
 
-* With count, if you remove the element at index 0 (i.e., sandbox_server_one) in var.sandboxes, the following happens:
+* With count, if you remove the element at index 0 (i.e., server_one) in var.servers, the following happens:
   
-  * The current element at index 1 (i.e., sanbox_server_two) will now become the new element at index 0, i.e., sandbox_server_two is now at index 0
-  * The current element at index 2 (i.e., sanbox_server_three) will now be the new element at index 1, i.e., sandbox_server_three is now at index 1
+  * The current element at index 1 (i.e., server_two) will now become the new element at index 0, i.e., server_two is now at index 0.
+  * The current element at index 2 (i.e., server_three) will now be the new element at index 1, i.e., server_three is now at index 1
   * There will be no element at index 3, and this index will be destroyed.
 
 ## Performance considerations when using count
