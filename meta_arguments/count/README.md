@@ -1,6 +1,6 @@
 # Count and Count Index
 
-[Terraform Count](https://spacelift.io/blog/terraform-count)
+[Terraform Count](https://kodekloud.com/blog/terraform-count/)
 
 ## Meta-Arguments:
 Meta-arguments are special arguments provided by Terraform to be used in the resource, data, or module blocks. The meta-argument supported in each block type varies. For example, the count meta-argument is supported in the resource, data, and module blocks.
