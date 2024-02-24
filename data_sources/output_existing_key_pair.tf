@@ -1,6 +1,12 @@
 data "aws_key_pair" "terraform" {
   key_name           = "terraform"
   include_public_key = true
+
+# Use it if your key has tags, otherwise not needed
+  filter {
+    name = "tag:Name"
+    values = ["terraform"]
+  }
 }
 
 output "publickey" {
