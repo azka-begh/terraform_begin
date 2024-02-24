@@ -18,6 +18,8 @@ terraform workspace new prd
 terraform workspace list
 terraform workspace select dev
 ```
+![E6751F89-AAEE-4B90-B3D2-87E5844C3FC9_1_201_a](https://github.com/begh-azka/terraform_aws/assets/97597065/e50ef860-6ec4-43a5-a581-8d63b08b1abb)
+
 ## How to manage variables with Terraform workspaces
 - Managing variables with Terraform workspaces is essential when you need different configurations for different environments, like dev, test, stage, and prod. 
 
