@@ -19,7 +19,7 @@
 6. **terraform workspace delete workspace-name** Delete a specified workspace.
 
 **State Files per Workspace**
-```
+```sh
 % tree -a
 .
 ├── .terraform
