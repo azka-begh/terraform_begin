@@ -10,11 +10,11 @@ A resource can define one or more infrastructure resource objects, such as VPCs,
 Terraform code supports three different syntaxes for comments:
 
 **Single-line comments:**
-```
+```sh
 # begins a single-line comment, ending at the end of the line.
 // also begins a single-line comment, as an alternative to #.
 ```
 **Multi-line comments:**
-```
+```sh
 /* and */ are start and end delimiters for a comment that might span over multiple lines.
 ```
