@@ -12,4 +12,15 @@
   
 - They can be recognized by blue badges.
   
-- Module verification is a manual process restricted to trusted HashiCorp partners.
+- Module verification is a manual process restricted to trusted HashiCorp partners.these 
+
+
+## Using Registry Modules
+
+To use these modules within code, we can make use of the source argument that contains the module path.
+```
+module "ec2-instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  version = "2.13.0"
+}
+```
