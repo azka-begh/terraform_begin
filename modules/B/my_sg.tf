@@ -1,3 +1,3 @@
 module "sec_grp" {
-  source = "../modules/locals_modules/sg"
+  source = "../modules/locals_module/sg"
 }
