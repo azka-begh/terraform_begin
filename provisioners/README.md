@@ -21,6 +21,9 @@ The local-exec provisioner allows executing commands locally on the machine runn
 ## Remote-Exec Provisioner
 The remote-exec provisioner runs commands remotely on the created resource. It establishes an SSH or WinRM connection to the resource and executes the specified commands. This provisioner is suitable for tasks that require remote execution, such as configuring software or managing the infrastructure.
 
+## File provsioner
+The file provisioner copies files or directories from the machine running Terraform to the newly created resource. 
+
 ### Destroy Time Provisioner
 If when=destroy is specified, the provisioner will run when the resource it is defined within, is destroyed.
 
@@ -32,3 +35,6 @@ By default, when provisioners fail, terraform apply will also fail. This behavio
 The allowed values are:
 1. **continue:** Ignore the error and continue with creation/destruction.
 2. **fail:** Throw an error and stop applying. If this is in creation provisioner, resource will be tainted.
+
+## Provisioners Without a Resource - Null Resource
+
