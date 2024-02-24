@@ -1,3 +1,5 @@
+# As we have not created a separate sg for this ec2 instance, deafaut sg will be assigned. Make sure port 22 is open.
+
 provider "aws" {
   region = "us-east-2"
 }
