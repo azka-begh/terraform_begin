@@ -18,8 +18,11 @@ From the official documentation:
 
  * A module can call other modules, which lets you include the child module's resources into the configuration in a concise way. Modules can also be called multiple times, either within the same configuration or in separate configurations, allowing resource configurations to be packaged and re-used.
 
-## Using Variables in Modules
-To make modules flexible, variables can be used. In the root module, a variable file can be maintained.
-But this is not a safe approach. As users in the child modules can assign a value to these variables and override the root module ones.
+## Challenges 
+    * One common need of infrastructure management is to build environments like staging, production etc with similar setup but keeping environment variables different.
+    *  When we use modules directly, the resources will be replicas of code in the modules.
 
-Instead of using variables, locals are recommended.
+## Using Variables in Modules
+   * To make modules flexible, variables can be used. In the root module, a variable file can be maintained.
+   * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the root module ones.
+   * Instead of using variables, locals are recommended.
