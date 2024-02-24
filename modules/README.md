@@ -27,3 +27,6 @@ A typical module can look like this:
    * To make modules flexible, variables can be used. In the root module, a variable file can be maintained.
    * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the default values specfied in the root modules.
    * To overcome this, instead of using variables, **locals are recommended**. These locals make modules flexible and at the same time cannot be overridden by users in child modules.
+
+## Accessing Outputs in Child Module
+  * In a parent module, if an output has been declared then, this output value can be accessed in the child module configuration files as ```module.module_name.output_name```
