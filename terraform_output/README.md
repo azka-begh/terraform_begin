@@ -6,10 +6,9 @@ You can check the value of an output variable in 2 ways after you have already a
 
 **The terraform output command is used to extract the value of an output variable from the state file.**
 
-```
-terraform output output_variable_name
-```
-```
+`terraform output output_variable_name`
+
+```sh
 resource "aws_instance" "example3" {
   ami           = "ami-05fb0b8c1424f266b"
   instance_type = "t2.micro"
