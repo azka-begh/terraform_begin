@@ -34,7 +34,9 @@ terraform workspace select dev
 │                       └── darwin_arm64
 │                           └── terraform-provider-aws_v5.38.0_x5
 ├── .terraform.lock.hcl
-├── ec2_instances.tf
+├── main.tf
+├── terraform.tfvars
+├── variables.tf
 ├── terraform.tfstate
 ├── terraform.tfstate.backup
 └── terraform.tfstate.d
@@ -43,7 +45,7 @@ terraform workspace select dev
 
 12 directories, 7 files
 ```
-## How to manage variables with Terraform workspaces
+## How to Manage Variables with Terraform Workspaces
 - Managing variables with Terraform workspaces is essential when you need different configurations for different environments, like dev, test, stage, and prod. 
 
 - First, you need to declare the variables as you would normally do for any Terraform configuration. Providing values to these variables can be done easily by using tfvars files.
@@ -64,3 +66,4 @@ locals {
   instance_type = terraform.workspace == “prod” ? “t2.large” : “t2.micro”
 }
 ```
+- Something like `lookup` and `terraform.workspace` will also be useful.
