@@ -26,3 +26,18 @@ terraform workspace select dev
 - First, you need to declare the variables as you would normally do for any Terraform configuration. Providing values to these variables can be done easily by using tfvars files.
 
 - For each environment, you can declare a tfvars file:
+```sh
+vars_dev.tfvars
+vars_test.tfvars
+vars_stage.tfvars
+vars_prod.tfvars
+```
+- Based on the workspace you are on (let’s suppose you are on the dev workspace), you will run an apply like:
+
+```terraform apply –var-file=vars_dev.tfvars```
+- You can also conditionally assign values to different parameters based on the workspace. Let’s take a look at an example:
+```sh
+locals {
+  instance_type = terraform.workspace == “prod” ? “t2.large” : “t2.micro”
+}
+```
