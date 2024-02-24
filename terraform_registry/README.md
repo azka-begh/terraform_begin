@@ -18,8 +18,7 @@
 ## Using Registry Modules
 
 To use these modules within code, we can make use of the source argument that contains the module path.
-```
-sh
+```sh
 module "ec2-instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "2.13.0"
@@ -27,8 +26,7 @@ module "ec2-instance" {
 ```
 
 
-```
-sh
+```sh
 provider "aws" {
   region     = "us-west-2"
 }
