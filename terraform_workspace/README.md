@@ -18,8 +18,31 @@ terraform workspace new prd
 terraform workspace list
 terraform workspace select dev
 ```
-![E6751F89-AAEE-4B90-B3D2-87E5844C3FC9_1_201_a](https://github.com/begh-azka/terraform_aws/assets/97597065/e50ef860-6ec4-43a5-a581-8d63b08b1abb)
+**State Files per Workspace**
+```
+% tree -a
+.
+├── .terraform
+│   ├── environment
+│   ├── modules
+│   │   └── modules.json
+│   └── providers
+│       └── registry.terraform.io
+│           └── hashicorp
+│               └── aws
+│                   └── 5.38.0
+│                       └── darwin_arm64
+│                           └── terraform-provider-aws_v5.38.0_x5
+├── .terraform.lock.hcl
+├── ec2_instances.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+└── terraform.tfstate.d
+    ├── dev
+    └── prod
 
+12 directories, 7 files
+```
 ## How to manage variables with Terraform workspaces
 - Managing variables with Terraform workspaces is essential when you need different configurations for different environments, like dev, test, stage, and prod. 
 
