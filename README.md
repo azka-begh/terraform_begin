@@ -73,5 +73,6 @@ terraform apply -replace="RESOURCE_TYPE.NAME"
   ```
 [Useful Blocks and Functions](https://linumary.medium.com/learning-terraform-with-real-world-scenarios-part-2-e5749e8e6f8e)
 
-**References**
+**References:**
+
 [Udemy Course](https://github.com/zealvora/terraform-beginner-to-advanced-resource)
