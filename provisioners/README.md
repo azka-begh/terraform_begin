@@ -25,4 +25,10 @@ The remote-exec provisioner runs commands remotely on the created resource. It e
 If when=destroy is specified, the provisioner will run when the resource it is defined within, is destroyed.
 
 ### Creation Time Provisioner
-They only run during creation of resources. If it fails, the resource is marked as tainted in the state file (the resource will be recreated on next run).
+It runs during creation of resources. If it fails, the resource is marked as tainted in the state file (the resource will be recreated on next run).
+
+## Provisioner - Failure Behavior
+By default, when provisioners fail, terraform apply will also fail. This behavior can be modified by *on_failure* setting.
+The allowed values are:
+1. **continue:** Ignore the error and continue with creation/destruction.
+2. **fail:** Throw an error and stop applying. If this is in creation provisioner, resource will be tainted.
