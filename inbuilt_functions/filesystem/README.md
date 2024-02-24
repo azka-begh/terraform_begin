@@ -1,12 +1,12 @@
 # File Function
 
-```
-terraform console
-```
+`terraform console`
 
 **file:** Reads the contents at the given path and returns them as a string
-```file(path)```
-```
+
+`file(path)`
+
+```sh
 > file ("abc.txt")
 <<EOT
 hello world 123
