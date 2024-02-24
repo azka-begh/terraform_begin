@@ -18,12 +18,12 @@ A typical module can look like this:
 
  * A module can call other modules, which lets you include the child module's resources into the configuration in a concise way. Modules can also be called multiple times, either within the same configuration or in separate configurations, allowing resource configurations to be packaged and re-used.
 
-## Challenges 
+## Challenges with Modules
    * One common need of infrastructure management is to build environments like staging, production etc with similar setup but keeping environment variables different.
    *  When we use modules directly, the resources will be replicas of code in the modules.
    *  Variables can help with this.
 
 ## Using Variables in Modules
    * To make modules flexible, variables can be used. In the root module, a variable file can be maintained.
-   * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the default values.
-   * Instead of using variables, locals are recommended.
+   * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the default values specfied in the root modules.
+   * To overcome this, instead of using variables, locals are recommended. These locals make modules flexible and at the same time cannot be overridden by users in child modules.
