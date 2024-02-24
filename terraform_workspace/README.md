@@ -13,10 +13,10 @@
 
 1. **terraform workspace -h:** List all the subcommands and options.
 2. **terraform workspace show:** Show the name of the current workspace.
-3. **terraform workspace new <workspace name>:** Create a new workspace with a specified name.
+3. **terraform workspace new workspace-name:** Create a new workspace with a specified name.
 4. **terraform workspace list:** List your workspaces.
 5. **terraform workspace select dev:** Select a specified workspace.
-6. **terraform workspace delete <workspace name>** Delete a specified workspace.
+6. **terraform workspace delete workspace-name** Delete a specified workspace.
 
 **State Files per Workspace**
 ```
