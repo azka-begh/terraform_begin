@@ -26,4 +26,4 @@ A typical module can look like this:
 ## Using Variables in Modules
    * To make modules flexible, variables can be used. In the root module, a variable file can be maintained.
    * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the default values specfied in the root modules.
-   * To overcome this, instead of using variables, locals are recommended. These locals make modules flexible and at the same time cannot be overridden by users in child modules.
+   * To overcome this, instead of using variables, **locals are recommended**. These locals make modules flexible and at the same time cannot be overridden by users in child modules.
