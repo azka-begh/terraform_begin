@@ -21,7 +21,7 @@ resource "aws_instance" "ec2" {
   ami           = "ami-05fb0b8c1424f266b"
   instance_type = "t2.micro"
   key_name      = aws_key_pair.ec2_pub_key.key_name
-
-  tags {
+  tags = {
     Name = "ubuntu-1"
+  }
 }
