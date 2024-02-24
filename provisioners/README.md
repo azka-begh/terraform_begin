@@ -11,7 +11,7 @@ There are three available provisioners:
 2. **local-exec** (used for local operations)
 3. **remote-exec** (used for remote operations).
    
-The file and remote-exec provisioners need a connection block to be able to do the remote operations.
+*The file and remote-exec provisioners need a connection block to be able to do the remote operations.*
 
 ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/5c8ee080-3587-4bcb-ba86-31a98b52dfea)
 
@@ -20,3 +20,6 @@ The local-exec provisioner allows executing commands locally on the machine runn
 
 ## Remote-Exec Provisioner
 The remote-exec provisioner runs commands remotely on the created resource. It establishes an SSH or WinRM connection to the resource and executes the specified commands. This provisioner is suitable for tasks that require remote execution, such as configuring software or managing the infrastructure.
+
+### Destroy Time Provisioner
+If when=destroy is specified, the provisioner will run when the resource it is defined within, is destroyed.
