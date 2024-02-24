@@ -29,7 +29,6 @@ resource "aws_instance" "ec2" {
     type = "ssh"
     user = "ubuntu"
     private_key = tls_private_key.rsa_key.private_key_pem
-    #file("./terraform.pem")
     host = self.public_ip
   }
 
