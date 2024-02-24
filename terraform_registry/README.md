@@ -55,3 +55,12 @@ module "ec2_cluster" {
 | **Repo Description**          | GitHub repo description is used to populate the short description of the module                        |
 | **Standard Module Structure** | The module must adhere to the standard module structure.                                               |
 | **x.y.z Tags for Releases**   | The registry uses tags to identify module versions. Release tag names must be a semantic version, which can be optionally be prefixed with a **v**. For example, v1.04 and v0.9.2                                                                |
+
+### Standard Module Structure
+```sh
+.
+├── main.tf
+├── outputs.tf
+├── README.md
+└── variables.tf
+```
