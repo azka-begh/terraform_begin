@@ -58,7 +58,6 @@ module "ec2_cluster" {
 
 ### Standard Module Structure
 ```sh
-.
 ├── main.tf
 ├── outputs.tf
 ├── README.md
