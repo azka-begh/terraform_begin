@@ -23,3 +23,6 @@ The remote-exec provisioner runs commands remotely on the created resource. It e
 
 ### Destroy Time Provisioner
 If when=destroy is specified, the provisioner will run when the resource it is defined within, is destroyed.
+
+### Creation Time Provisioner
+They only run during creation of resources. If it fails, the resource is marked as tainted (the resource will be recreated).
