@@ -21,8 +21,9 @@ A typical module can look like this:
 ## Challenges 
    * One common need of infrastructure management is to build environments like staging, production etc with similar setup but keeping environment variables different.
    *  When we use modules directly, the resources will be replicas of code in the modules.
+   *  Variables can help with this.
 
 ## Using Variables in Modules
    * To make modules flexible, variables can be used. In the root module, a variable file can be maintained.
-   * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the root module ones.
+   * But this is not a safe approach. As users in the child modules can assign a value to these variables and override the default values.
    * Instead of using variables, locals are recommended.
