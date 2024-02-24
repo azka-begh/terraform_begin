@@ -51,7 +51,7 @@ module "ec2_cluster" {
 | Requirement                 | Description                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------------------- |
 | GitHub                      | The module must be on GitHub and must be a public repo. This is required for public registry. |
-| Named                       | Module repos must use a three part anme format terraform-<PROVIDER>-<NAME>                    |
+| Named                       | Module repos must use a three part name format **terraform-PROVIDER-NAME**                        |
 | Repo Description            | GitHub repo description is used to populate the short description of the module               |
 | Standard Module Structure   | The module must adhere to the standard module structure.                                      |
-| x.y.z tags for releases     | The registry uses tags to identify module versions. Relesae tag names must be a semnatic version, which can be optionally be prefixed with a v. For example, v1.04 and 0.9.2                                                              |
+| x.y.z tags for releases     | The registry uses tags to identify module versions. Release tag names must be a semantic version, which can be optionally be prefixed with a **v**. For example, v1.04 and v0.9.2                                                              |
