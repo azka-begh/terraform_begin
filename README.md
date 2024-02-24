@@ -75,4 +75,6 @@ terraform apply -replace="RESOURCE_TYPE.NAME"
 
 **References:**
 
-[Udemy Course](https://github.com/zealvora/terraform-beginner-to-advanced-resource)
+[Udemy Course - Github](https://github.com/zealvora/terraform-beginner-to-advanced-resource)
+
+[Udemy](https://www.udemy.com/course/terraform-beginner-to-advanced/)
