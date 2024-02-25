@@ -17,7 +17,7 @@
 
 
 ## Commands
-Put an import block in your config file. 
+- Put an import block in your config file. 
 
 ```sh
 import {
@@ -26,7 +26,9 @@ import {
 }
 ```
 
-Then run
+- Then run:
 ```sh
 terraform plan -generate-config-out=my_sg.tf
 ```
+
+- This will generate a state file and a config file of that resource.
