@@ -27,7 +27,7 @@
 1. **list:**
 - It lists resources within a Terraform state.
 ```sh
-terraform state list
+% terraform state list
 aws_iam_user.lb
 ```
 3. **mv:** 
