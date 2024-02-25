@@ -13,4 +13,4 @@
 - Users still had to write configuration (.tf) files from scratch.
 
 **Now:**
-- In the latest versions of Terraform, `import` can automatically create both the state files and the terraform config files for the resources you want to import.
+- In the latest versions of Terraform (>=1.5), `import` can automatically create both the state files and the terraform config files for the resources you want to import.
