@@ -1,3 +1,5 @@
+# When you create a resource, a tfstate file will not be created on your local. Instead it will populate in your bucket folder.
+
 terraform {
   backend "s3" {
     bucket = "Name-of-your-bucket"
