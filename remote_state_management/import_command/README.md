@@ -36,3 +36,5 @@ terraform plan -generate-config-out=my_sg.tf
 ```
 
 - This will generate a state file and a config file of that resource.
+
+** In aws_instance import, there is an issue with ipv6. Once you run `terraform plan -generate-config-out=my_instance.tf` command, go to the config file and remove ipv6 fields and then run `terraform plan`. This will successfully let Terraform manage the resource.
