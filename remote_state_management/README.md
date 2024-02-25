@@ -12,7 +12,7 @@
 
 ## Terraform State Management
 - As your Terraform usage becomes more advanced, there are some cases where you might need to modify the terraform state.
-- It is important to never modify the state file directly. Instead, we should make changes via terraform state commands.
+- Rather than modify the state directly, the terraform state commands can be used in many cases instead.
 - There are multiple sub-commands that can be used with terraform state, these include:
 
 |  No.  | State Sub-Command  |            Description                                      |
@@ -30,10 +30,11 @@
 % terraform state list
 aws_iam_user.lb
 ```
-3. **mv:** 
+2. **mv:** 
 - The terraform state mv command is used to move items in a terraform state.
 - This command is used in many cases in which you want to rename an existing resource without destroying and recreating it.
 - Due to the destructive nature of this command, it will output a backup copy of the state prior to saving any changes.
+  
 `terraform state [options] SOURCE DESTINATION`
 
 ```sh
@@ -41,16 +42,16 @@ aws_iam_user.lb
 Move "aws_instance.myec2" to "aws_instance.inst3"
 Successfully moved 1 object(s).
 ```
-2. **pull:**
+3. **pull:**
 - The terraform state pull command is used to manually download and output the state from remote state.
 - This is useful for reading values out of state (potentially pairing this command with something like jq)
 `% terraform state pull`
 
-3. **push:**
+4. **push:**
 - The terraform state push command is used to manually upload a local state file to remote state.
 - This command should be used rarely.
 
-4. **remove:**
+5. **remove:**
 - The terraform state rm command is used to remove items from the terraform state.
 - Items removed from the state are not physically destroyed.
 - Items removed from the Terraform state are no longer managed by Terraform.
@@ -61,7 +62,7 @@ Removed aws_instance.inst3
 Successfully removed 1 resource instance(s).
 ```
 
-5. **show:**
+6. **show:**
 - It shows all the attributes of a single resource in the Terraform state.
 ```sh
 % terraform state show aws_iam_user.lb
