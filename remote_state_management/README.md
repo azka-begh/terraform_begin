@@ -26,3 +26,15 @@ There are multiple sub-commands taht can be used with terraform state, these inc
 |   5   |      rm            |  Replace provider in the state                              |
 |   6   |      show          |  Show a resource in the state                               |
 
+## Sub-command - mv: 
+- The terraform state mv command is used to move items in a terraform state.
+- This command is used in many cases in which you want to rename an existing resource without destroying and recreating it.
+- Due to the destructive nature of this command, it will output a backup copy of the state prior to saving any changes.
+`terraform state [options] SOURCE DESTINATION`
+
+```sh
+terraform state mv aws_instance.myec2 aws_ins
+tance.inst3
+Move "aws_instance.myec2" to "aws_instance.inst3"
+Successfully moved 1 object(s).
+```
