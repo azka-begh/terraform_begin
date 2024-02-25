@@ -36,8 +36,9 @@
 ## Terraform Lock File:
 - The Terraform lockfile is used by Terraform to track the desired state of your infrastructure.
 - The lock file is always named **.terraform.lock.hcl**, and this name is intended to signify that it is a lock file for various items that Terraform caches in the .terraform subdirectory of your working directory.
-- Terraform recommends including the Dependency Lock File file in your version control repository, alongside your infrastructure code.
-- You can generate or update this file by running ```terraform init``` locally and committing it into your repository.
+- **Terraform recommends including the Dependency Lock File file in your version control repository, alongside your infrastructure code.**
+- If multiple people need to work on the same terraform configuration, it could happen that one user can set up their infrastructure perfectly while others can face dependency issues. What the first user can do is commit their lock file to git and the others can use that very file on their systems. This helps in resolving dependency related issues. 
+- You can generate or update this file by running `terraform init` locally and committing it into your repository.
 
 ## Commands:
 ```sh
