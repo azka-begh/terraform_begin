@@ -51,7 +51,7 @@ Types:
 ```sh
   terraform {
    backend "s3" {
-    bucket = "kops-s3-k8s-bucket"
+    bucket = "bucket-name"
     key    = "backend/dynamodb-demo.tfstate"
     region = "us-east-2"
     dynamodb_table = "terraform-state-locking"
