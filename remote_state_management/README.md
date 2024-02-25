@@ -30,3 +30,5 @@
 2. The state file is stored in a central backend.
 
 ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/979ce919-dec6-4ff4-a7d2-0ebee255fd74)
+
+- Backends supported in Terraform are: S3, Consul, Azurerm, Kubernetes, HTTP, ETCD, artifactory.
