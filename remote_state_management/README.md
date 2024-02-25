@@ -1,4 +1,4 @@
-# Remote State Management
+# State Management
 
 ## Terraform and gitignore
 - Depending on the environments, it is recommended to avoid committing certain files to git. Below files should be mentioned in .gitignore and not committed to your source code.
@@ -77,3 +77,7 @@ resource "aws_iam_user" "lb" {
     unique_id     = "AIDAZ2ECWTDZG7FVPAKWS"
 }
 ```
+# Terraform Remote State
+- **terraform_remote_state** is a data source that can be used to fetch details from the remote state file directly.
+- This is useful when you need to reference the outputs of configurations that are stored in different state files.
+- When an output block is defined in your configuration, the contents are included in the state file. These details can then be referenced elsewhere in your project
