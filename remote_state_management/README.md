@@ -56,3 +56,19 @@ Successfully moved 1 object(s).
 Removed aws_instance.inst3
 Successfully removed 1 resource instance(s).
 ```
+
+5. **show:**
+- It shows all the attributes of a single resource in the Terraform state.
+```sh
+% terraform state show aws_iam_user.lb
+# aws_iam_user.lb:
+resource "aws_iam_user" "lb" {
+    arn           = "arn:aws:iam::674583976178:user/system/loadbalancer"
+    force_destroy = false
+    id            = "loadbalancer"
+    name          = "loadbalancer"
+    path          = "/system/"
+    tags_all      = {}
+    unique_id     = "AIDAZ2ECWTDZG7FVPAKWS"
+}
+```
