@@ -14,3 +14,19 @@
 
 **Now:**
 - In the latest versions of Terraform (>=1.5), `import` can automatically create both the state files and the terraform config files for the resources you want to import.
+
+
+## Commands
+Put an import block in your config file. 
+
+```sh
+import {
+  to = aws_security_group.mysg  #resource_name.local_name
+  id = "sg-0c35f69038268c64f"   
+}
+```
+
+Then run
+```sh
+terraform plan -generate-config-out=my_sg.tf
+```
