@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "kops-s3-k8s-bucket"
+    bucket = "bucket-name"
     key    = "network/eip.tfstate"
     region = "us-east-2"
   }
