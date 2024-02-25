@@ -17,6 +17,10 @@
 
 
 ## Commands
+The import block takes two parameters:
+id → The id of the resource used in your cloud provider
+to → The resource address that will be used in Terraform
+
 - Put an import block in your config file. 
 
 ```sh
