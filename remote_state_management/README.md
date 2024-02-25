@@ -1,9 +1,8 @@
 # Remote State Management
 
-## Overview of `.gitignore`
+## Terraform and gitignore
 
-- The .gitignore file is a text file that tells Git which files or folders to ignore in a project.
-### Terraform and gitignore
+**`.gitignore`:** The .gitignore file is a text file that tells Git which files or folders to ignore in a project.
 
 - Depending on the environments, it is recommended to avoid committing certain files to git. Below files should be mentioned in .gitignore and not committed to your source code.
   
@@ -14,3 +13,20 @@
 |   3   | terraform.tfstate | Should be stored on the remote side.                                        |
 |   4   | crash.log         | If terraform crashes, the logs are stored in a file named crash.log         |
 
+## Terraform Backend
+
+- Terraform Backend is a configuration option in Terraform that allows you to store and manage the state of your infrastructure in a remote or local location.
+- The backend is responsible for storing the state file and providing an interface for reading and writing state data.
+- When you run Terraform, it checks the backend to see if there are any changes to the state file, and if there are, it applies those changes to your infrastructure.
+
+- By default, Terraform implicitly uses a backend called local to store state as a local file on disk `terraform.tfstate`.
+  
+### Challenges with Local Backend
+
+- Nowadays, Terraform project is handled and collaborated on by an entire team. Storing the state file in the local laptop will not allow collaboration.
+- So, there is a need of centralizing it. It is done in the following ways:
+
+1. The terraform code is stored in a git repository.
+2. The state file is stored in a central backend.
+
+![image](https://github.com/begh-azka/terraform_aws/assets/97597065/979ce919-dec6-4ff4-a7d2-0ebee255fd74)
