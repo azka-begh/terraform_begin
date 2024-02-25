@@ -12,3 +12,6 @@
 
 [DynamoDB](https://www.scylladb.com/learn/dynamodb/introduction-to-dynamodb/)
 
+### DynamoDB State Locking:
+- **dynamodb_endpoint:** Custom endpoint for teh AWS DynamoDB API.
+- **dynamodb_table:** Name of DynamoDB Table to use for state locking and inconsistency. The table must have a partition key named LockID with type of String. If not configured, state locking will be disabled.
