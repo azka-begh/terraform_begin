@@ -40,6 +40,6 @@ Types:
 - Terraform acquires a state lock to protect the state from being written by multiple users at the same time.
   
 **How does terraform know an operating is going on?**
-    - While we run terraform apply or destroy on local backend, a file called **`.terraform.tfstate.lock.info`** is created.
-    - This file disappears as soon as the operation is completed.
-    - Same file needs to get created in remote backend everytime an operation is in progress. So, before using any remote backend, we should make sure it supoorts state locking.
+- While we run terraform apply or destroy on local backend, a file called **`.terraform.tfstate.lock.info`** is created.
+- This file disappears as soon as the operation is completed.
+- Same file needs to get created in remote backend everytime an operation is in progress. So, before using any remote backend, we should make sure it supoorts state locking.
