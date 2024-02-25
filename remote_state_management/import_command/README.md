@@ -3,7 +3,9 @@
 **Scenario:**
 - It can happen that all the resources in an organization were created manually.
 - Later, the organization decided to migrate to Terraform and manage these resources using IaC.
+  
 **How will they accomplish this?**
+
 *Through Terraform Import*
 
 **Earlier Approach:**
