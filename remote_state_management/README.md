@@ -18,9 +18,8 @@
 
 - Nowadays, Terraform project is handled and collaborated on by an entire team. Storing the state file in the local laptop will not allow collaboration.
 - So, there is a need of centralizing it. It is done in the following ways:
-
-1. The terraform code is stored in a git repository.
-2. The state file is stored in a central backend.
+   1. The terraform code is stored in a git repository.
+   2. The state file is stored in a central backend.
 
 ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/979ce919-dec6-4ff4-a7d2-0ebee255fd74)
 
