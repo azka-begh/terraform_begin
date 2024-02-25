@@ -1,9 +1,6 @@
 # Remote State Management
 
 ## Terraform and gitignore
-
-**`.gitignore`:** The .gitignore file is a text file that tells Git which files or folders to ignore in a project.
-
 - Depending on the environments, it is recommended to avoid committing certain files to git. Below files should be mentioned in .gitignore and not committed to your source code.
   
 |  No.  |Files to Ignore    |            Description                                                      |
@@ -13,9 +10,10 @@
 |   3   | terraform.tfstate | Should be stored on the remote side.                                        |
 |   4   | crash.log         | If terraform crashes, the logs are stored in a file named crash.log         |
 
-# Terraform State Management
-
-There are multiple sub-commands taht can be used with terraform state, these include:
+## Terraform State Management
+- As your Terraform usage becomes more advanced, there are some cases where you might need to modify the terraform state.
+- It is important to never modify the state file directly. Instead, we should make changes via terraform state commands.
+- There are multiple sub-commands that can be used with terraform state, these include:
 
 |  No.  | State Sub-Command  |            Description                                      |
 | ----- | ------------------ | ----------------------------------------------------------- |
@@ -26,7 +24,13 @@ There are multiple sub-commands taht can be used with terraform state, these inc
 |   5   |      rm            |  Replace provider in the state                              |
 |   6   |      show          |  Show a resource in the state                               |
 
-1. **mv:** 
+1. **list:**
+- It lists resources within a Terraform state.
+```sh
+terraform state list
+aws_iam_user.lb
+```
+3. **mv:** 
 - The terraform state mv command is used to move items in a terraform state.
 - This command is used in many cases in which you want to rename an existing resource without destroying and recreating it.
 - Due to the destructive nature of this command, it will output a backup copy of the state prior to saving any changes.
