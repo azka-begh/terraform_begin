@@ -26,33 +26,32 @@ module "consul" {
 }
 ```
 
-### Git Module Source:
+### Git and GitHub:
 - Arbitrary git repositories can be used by prefixing the address with the special `git::` prefix.
 - After this prefix, any valid Git URL can be specified to select one of the protocols supported by git.
 ```sh
 module "vpc" {
-  source = "git::https://example.com/vpc.git
+  source = "git::https://github.com/zealvora/tmp-repo.git
 }
 module "storage" {
-  source = "git::ssh://username@example.com/storage.git"
+  source = "git::ssh://username@github.com/storage.git"
 }
 ```
+- However, Terraform will recognize unprefixed `github.com` URLs and interpret them automatically as git repository sources.
+```sh
+module "consul" {
+  source = "github.com/zealvora/tmp-repo.git"
+}
+```
+
 ### Referencing a Branch in a Module Source
 - By deafult, Terraform will clone and use the default branch (referenced by HEAD) in the selected repository.
 - You can override this using teh ref argument.
   ```sh
   module "vpc" {
-    source = "git::https://example.com/vpc.git?ref=develop"
+    source = "git::https://github.com/zealvora/tmp-repo.git?ref=development"
   }
 - The value of the ref argument can be any reference that would be accepted by the git checkout command, including branch and tag names.
-
-### GitHub
-- Terraform will recognize unprefixed `github.com` URLs and interpret them automatically as git repository sources.
-```sh
-module "consul" {
-  source = "github.com/hashicorp/example"
-}
-```
 
 ### Bitbucket
 - Terraform will recognize unprefixed `bitbucket.org` URLs and interpret them automatically as BitBucket repositories. (Only for public repos)
