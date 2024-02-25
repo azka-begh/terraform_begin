@@ -32,3 +32,5 @@
 ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/979ce919-dec6-4ff4-a7d2-0ebee255fd74)
 
 - Backends supported in Terraform are: S3, Consul, Azurerm, Kubernetes, HTTP, ETCD, artifactory.
+- Accessing state in a remote service generally requires some kind of access credentials.
+- Some backends act like plain "remote disks" for state files; **others support locking the state while operations are being performed, which helps prevent conflicts and inconsistencies**.
