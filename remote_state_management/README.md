@@ -14,7 +14,7 @@
 |   4   | crash.log         | If terraform crashes, the logs are stored in a file named crash.log         |
 
 ## Terraform Backend
-### Challenges with Local Backend
+### Challenges with storing state files on local
 
 - Nowadays, Terraform project is handled and collaborated on by an entire team. Storing the state file in the local laptop will not allow collaboration.
 - So, there is a need of centralizing it. It is done in the following ways:
