@@ -1,6 +1,6 @@
 # Terraform Cloud
 [Terraform Cloud](https://spacelift.io/blog/what-is-terraform-cloud)
-˘ˍ˚ˍ
+
 - It manages Terraform runs in a consistent and reliable environment with various features like access controls, private registry for sharing modules, policy controls and others.
 - We can create a workspace, import all the config files from our SCM and starting running. Runs can be applied or discarded.
 - To add aws access and secret access keys, we need to add env variables to terraform cloud and make them sensitive.
@@ -28,7 +28,8 @@
 ## Terraform Cloud - Backend Operation Types
 - Remote backend stores Terraform state and may be used to run operations in Terraform cloud.
 - Terraform Cloud can be used with local operations, in which case only state is stored in the Terraform Cloud backend.
- 1. Remote Operations:
+**Remote Operations:**
+  
 When using full remote operations, terraform apply or plan can be executed in Terraform Cloud's run environment, with log output sreaming to the local terminal.
 ```sh
 terraform {
@@ -36,11 +37,15 @@ terraform {
    organization = "saturnhead"
 
    workspaces {
-     name = "random_pet"
+       name = "random_pet"
+     }
    }
- }
-}
-```
-
-
- 
+  }
+  ```
+  
+## Air Gapped Environments
+  
+- An air gap is a network security measure employed to ensure that a secure computer network is physically isolated from unsecured networks, such as public internet.
+- Air gapped environments are used in various areas, such as military/governmental computer networks/systems, financial computer systems etc
+    ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/2622a5e4-c46b-4835-9c69-626545dc6f80)
+- Terraform Enterprise is installed using either an online or air gapped method as the names infer, one requires internet connectivity, the other does not.
