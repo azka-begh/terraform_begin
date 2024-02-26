@@ -30,5 +30,17 @@
 - Terraform Cloud can be used with local operations, in which case only state is stored in the Terraform Cloud backend.
  1. Remote Operations:
 When using full remote operations, terraform apply or plan can be executed in Terraform Cloud's run environment, with log output sreaming to the local terminal.
- 2. 
- 3. 
+```sh
+terraform {
+ cloud {
+   organization = "saturnhead"
+
+   workspaces {
+     name = "random_pet"
+   }
+ }
+}
+```
+
+
+ 
