@@ -11,12 +11,14 @@
 
 ## Workspace Commands
 
-1. **terraform workspace -h:** List all the subcommands and options.
-2. **terraform workspace show:** Show the name of the current workspace.
-3. **terraform workspace new workspace-name:** Create a new workspace with a specified name.
-4. **terraform workspace list:** List your workspaces.
-5. **terraform workspace select workspace-name:** Select a specified workspace.
-6. **terraform workspace delete workspace-name** Delete a specified workspace.
+|          Command              |                                Description                                |
+| ----------------------------- | ------------------------------------------------------------------------- |
+| terraform workspace -h        |  List all the subcommands and options.   |
+| terraform workspace show      |  Show the name of the current workspace.  |
+| terraform workspace new workspace-name | Create a new workspace with a specified name.  |
+| terraform workspace list      |List your workspaces.   |
+| terraform workspace select workspace-name | Select a specified workspace.  |
+| terraform workspace delete workspace-name |Delete a specified workspace.   |
 
 **State Files per Workspace**
 ```sh
