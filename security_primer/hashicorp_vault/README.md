@@ -33,3 +33,4 @@ output "vault_sec" {
   sensitive = "true"
 }
 ```
+**If you use Terraform to fetch credentials from Vault to use them in a resource block, these credentials will be saved to the state file. So, we need to secure our state file to prevent our credentials from getting compromised.**
