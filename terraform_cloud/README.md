@@ -4,12 +4,12 @@
 - It manages Terraform runs in a consistent and reliable environment with various features like access controls, private registry for sharing modules, policy controls and others.
 - We can create a workspace, import all the config files from our SCM and starting running. Runs can be applied or discarded.
 - To add aws access and secret access keys, we need to add env variables to terraform cloud and make them sensitive.
-
+- If your workspace is version control workflow then you cannot apply any changes from cli (vcs should be the single source of truth)
+  
 ## Terraform vs Terraform Cloud
 - Terraform, also known as Terraform OSS, is the open-source version of Terraform.
 - You don’t need to pay anything to use it, but still, in order to have a functioning workflow, you will need to have a CI/CD platform in place and somewhere to store the remote state which will incur costs.
 - Terraform Cloud is a product that leverages Terraform, acts as a CI/CD platform for your code, and also stores the state for you.
-- If your workspace is version control workflow then you cannot apply any changes from cli (vcs should be the single source of truth)
 
 ## Terraform Cloud vs Terraform Enterprise
 - The main difference between Terraform Cloud and Terraform Enterprise is the fact that the first is a SaaS product, and the latter is self-hosted. 
