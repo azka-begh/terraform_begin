@@ -69,7 +69,7 @@ LOCK_ID = Displayed in terminal when file is locked and no operation runs
 |   terraform fmt           |  Formats code per HCL canonical standard      |
 |   terraform refresh       |  Refreshes the .tfstate file but does not modify the infrastructure     |
 
-**terraform apply (or plan) -replace="aws_instance.example" : Recreates the tainted resource or the resource you want Terraform to create. **
+**terraform apply (or plan) -replace="aws_instance.example" : Recreates the tainted resource or the resource you want Terraform to create.**
 
 ## Destroy a Single Resource
 ```sh
