@@ -18,12 +18,15 @@
 - Having a self-hosted product can be beneficial for an organization that needs to have isolated networks and better governance overall.
 
 ## Overview of Sentinel
-- Sentinel is a policy-as-code framework integrated with the Hashicorp Enterprise products.
+- Sentinel is an embedded  policy-as-code framework integrated with the Hashicorp Enterprise products.
 - It enables fine-grained, logic-based policy decisions, and can be extended to use information from external sources.
 - Paid feature.
- ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/6b8a7818-5fc7-42de-b7e7-244f3a80afb2)
 - Policies can be attached to workspaces.
 - Example: Policy of having tags in aws or not allowing traffic from 0.0.0.0/0. If these policies are enabled and attached then no instance will be created unless it has a tag.
+- Can be used for various use-cases like:
+  - Verify if Ec2 instance has tags
+  - Verify if the S3 bucket has encryption enabled.
+![image](https://github.com/begh-azka/terraform_aws/assets/97597065/6b8a7818-5fc7-42de-b7e7-244f3a80afb2)
 
 ## Terraform Cloud - Backend Operation Types
 - Remote backend stores Terraform state and may be used to run operations in Terraform cloud.
@@ -49,3 +52,11 @@ terraform {
 - Air gapped environments are used in various areas, such as military/governmental computer networks/systems, financial computer systems etc
     ![image](https://github.com/begh-azka/terraform_aws/assets/97597065/2622a5e4-c46b-4835-9c69-626545dc6f80)
 - Terraform Enterprise is installed using either an online or air gapped method as the names infer, one requires internet connectivity, the other does not.
+
+
+## Sensitive Data in State File
+- If you manage any sensitive data with Terraform (like passwords, user passwords or private keys), treat the state itself as sensitive data.
+- Approaches in such a scenario:
+  - Terraform Cloud always encrypts the state at rest and protects it with TLS in transit.
+  - Terraform Cloud also knows the identity of the user requesting state and maintains a history of state changes.
+  - The S3 backend supports encryption at rest when the encrypt option is enabled.  
