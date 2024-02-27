@@ -20,6 +20,13 @@
 
  * A module can call other modules, which lets you include the child module's resources into the configuration in a concise way. Modules can also be called multiple times, either within the same configuration or in separate configurations, allowing resource configurations to be packaged and re-used.
 
+## Private Registry for Module Sources
+- You can also use modules from private registry, like the one provided by terraform Cloud.
+- private registry modules have source strings in the following form:
+  `HOSTNAME/NAMESPACE/NAME/PROVIDER`
+- This is the same format as the public registry, but with an added hostname prefix.
+- While fetching a module, having a version is required:
+
 ## Challenges with Modules
    * One common need of infrastructure management is to build environments like staging, production etc with similar setup but keeping environment variables different.
    *  When we use modules directly, the resources will be replicas of code in the modules.
