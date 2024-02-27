@@ -40,7 +40,11 @@
 - `If multiple people need to work on the same terraform configuration, it could happen that one user can set up their infrastructure perfectly while others can face dependency issues. What the first user can do is commit their lock file to git and the others can use that very file on their systems. This helps in resolving dependency related issues.` 
 - You can generate or update this file by running `terraform init` locally and committing it into your repository. In case you changed the provider's version later on, you would have to run `terraform init -upgrade' first.
 - Currently, only provider dependencies are tracked by lock file. Terraform does not remember version selections for *remote* modules, and so Terraform will always select the newest available module version that meets the specified version constraints.
-- Terraform has a force-unlock command to manually unlock the state if unlocking failed. `-lock=false`
+- Terraform has a force-unlock command to manually unlock the state if unlocking failed.
+
+  `terraform force-unlock LOCK_ID`
+
+LOCK_ID = Displayed in terminal when file is locked and no operation runs
 
 ## Commands:
 |          Command          |                                Description                                |
