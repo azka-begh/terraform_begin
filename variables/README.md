@@ -23,19 +23,29 @@
 5. **sensitive** — a boolean value. If true, Terraform masks the variable’s value anywhere it displays the variable.
 
 **3. Output Variables:**
-- Output variables in Terraform are used to display the required information in the console output after a successful application of configuration for the root module. 
+- Output variables in Terraform are used to display the required information in the console output after a successful application of configuration for the root module.
+- **Supressing Values in CLI Output:** An output can be marked as containing sensitive material using the optional sensitive argument.
+- Setting an output value in the root module as sensitive prevents Terraform from showing its value in the list of outputs at the end of terraform apply.
+- Sensitive values are still recorded in the state and so will be visible to anyone who is able to access the state data.
+```sh
+output "db_password" {
+  value       = aws_db_instance.db_password
+  description = "The password for logging in to the database"
+  sensitive   = true
+}
+```
 
 ## Passing Variables
 
-* CLI Flag
+- CLI Flag
 ```sh
 terraform plan -var "variable_name=variable_value"
 ```
-* Variables from custom files
+- Variables from custom files
 ```sh
 terraform plan -var-file="file-name.tfvars"
 ```
-* Env Variables:
+- Env Variables:
 ```sh
 1. setx TF_VAR_variable_name variable_value (Windows)
 2. export TF_VAR_variable_name="variable_value" (Linux/Mac)
