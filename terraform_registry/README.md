@@ -1,5 +1,8 @@
 # Terraform Registry
 
+Syntax for referencing a registry module is 
+`NAMESPACE/NAME/PROVIDER`
+
 - It is a repository of modules written by the Terraform community.
   
 - The registry can help you get started with Terraform more quickly.
