@@ -1,10 +1,13 @@
 # Terraform Cloud
 [Terraform Cloud](https://spacelift.io/blog/what-is-terraform-cloud)
+[Terraform Cloud Official Documentation](https://developer.hashicorp.com/terraform/cloud-docs/api-docs#authentication)
+[Login to Terraform Cloud using CLI](https://medium.com/@1nikjadhav123/how-to-log-in-to-terraform-cloud-from-the-cli-8ee3efad2fe5)
 
 - It manages Terraform runs in a consistent and reliable environment with various features like access controls, private registry for sharing modules, policy controls and others.
 - We can create a workspace, import all the config files from our SCM and starting running. Runs can be applied or discarded.
 - To add aws access and secret access keys, we need to add env variables to terraform cloud and make them sensitive.
-- If your workspace is version control workflow then you cannot apply any changes from cli (vcs should be the single source of truth)
+- If your workspace is version control workflow then you cannot create a resource locally and apply any changes from cli (vcs should be the single source of truth).
+- To login to Terraform cloud using CLI, token must be used for authentication.
   
 ## Terraform vs Terraform Cloud
 - Terraform, also known as Terraform OSS, is the open-source version of Terraform.
