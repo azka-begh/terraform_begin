@@ -63,3 +63,5 @@ The order of precedence for variable sources is as follows with later sources ta
 4. Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
 
 5. Any -var and -var-file options on the command line, in the order they are provided. (Highest Precedence)
+
+- Default value and description of a variable are not stored in state file.
