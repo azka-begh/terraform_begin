@@ -29,6 +29,7 @@ import {
   id = "sg-0c35f69038268c64f"   
 }
 ```
+**CLI : `terraform import aws_resource.local_name resource.id`**
 
 - Then run:
 ```sh
