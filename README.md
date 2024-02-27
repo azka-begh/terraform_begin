@@ -44,13 +44,13 @@
 ## Commands:
 |          Command          |                                Description                                |
 | ------------------------- | ------------------------------------------------------------------------- |
-|   terraform init          |  Initializes a working directory containing configuration files and installs plugins for required providers |
+|   terraform init          |  Initializes a working directory containing configuration files and installs plugins for required providers. Creates the terraform.lock.hcl file. |
 |   terraform plan          |  Creates an execution plan and lets us preview the changes that Terraform plans to make to our infrastructure.|
-|   terraform apply         |  Executes the actions proposed in a Terraform plan to create, update, or destroy infrastructure.     |
+|   terraform apply         |  Executes the actions proposed in a Terraform plan to create, update, or destroy infrastructure. Creates terraform.tfstate file.  |
 |   terraform destroy       |  Destroy all remote objects managed by a particular Terraform configuration.       |
 |   terraform validate      |  Validates code for syntax                    |
 |   terraform fmt           |  Formats code per HCL canonical standard      |
-
+|   terraform refresh       |  Refreshes the .tfstate file but does not modify the infrastructure     |
 
 ## Destroy a Single Resource
 ```sh
