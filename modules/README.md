@@ -32,7 +32,13 @@ module "consul" {
 - private registry modules have source strings in the following form:
   `HOSTNAME/NAMESPACE/NAME/PROVIDER`
 - This is the same format as the public registry, but with an added hostname prefix.
-- While fetching a module, having a version is required:
+- While fetching a module, having a version is required
+```sh
+module "consul" {
+  source  = "app.terraform.io/example-corp/k8s-cluster/azurerm"
+  version = "1.1.0"
+}
+```
 
 ## Challenges with Modules
    * One common need of infrastructure management is to build environments like staging, production etc with similar setup but keeping environment variables different.
@@ -58,12 +64,6 @@ module "consul" {
     - HTTP URLs
     - S3 Buckets
     - GCS Buckets
-```sh
-module "consul" {
-  source  = "app.terraform.io/example-corp/k8s-cluster/azurerm"
-  version = "1.1.0"
-}
-```
 
 ### Local Path: 
 A local path must begin with either ./ or ../ to indicate a local path is intended.
