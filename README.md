@@ -4,7 +4,19 @@
 
 [Terraform Cheatsheet](https://spacelift.io/blog/terraform-commands-cheat-sheet#manage-your-workspaces)
 
+## Terraform:
 - Terraform is a powerful Infrastructure as Code (IaC) software tool offered by HashiCorp. It facilitates provisioning and managing your infrastructure on-prem and in the cloud.
+
+## IAC Benefits:
+1. Automation
+2. Versioning
+3. Reusability
+
+## Various IAC Tools Available in the Market:
+1. Terraform
+2. CloudFormation
+3. Azure Resource Manager (ARM)
+4. Google Cloud Deployment Manager
 
 ## How Does Terraform Work?
 
