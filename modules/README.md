@@ -1,5 +1,7 @@
 # Modules
 
+[Modules in Terraform](https://developer.hashicorp.com/terraform/language/modules/syntax)
+
 - A Terraform module is a collection of standard configuration files in a dedicated directory. 
 - Terraform modules encapsulate groups of resources dedicated to one task, reducing the amount of code you have to develop for similar infrastructure components.
 - It is recommended to explicitly constraint the acceptable version numbers for each external module to avoid unexpected or unwanted changes.
@@ -64,7 +66,7 @@ module "consul" {
     - HTTP URLs
     - S3 Buckets
     - GCS Buckets
-
+ECR is not supported.
 ### Local Path: 
 A local path must begin with either ./ or ../ to indicate a local path is intended.
 ```sh
@@ -102,3 +104,8 @@ module "consul" {
 
 ### Bitbucket
 - Terraform will recognize unprefixed `bitbucket.org` URLs and interpret them automatically as BitBucket repositories. (Only for public repos)
+
+## Accessing Child Module Outputs
+In a parent module, outputs of child modules are available in expressions as **`module.<MODULE NAME>.<OUTPUT NAME>`**. For example, if a child module named web_server declared an output named instance_ip_addr, you could access that value as module.web_server.instance_ip_addr.
+
+The problem with outputs created within a child module is that they are not immediately accessible from the root module. So, a terraform apply (run from the root directory) will not output the values to the CLI by default.
