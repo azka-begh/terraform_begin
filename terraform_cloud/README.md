@@ -31,9 +31,11 @@
 ## Terraform Cloud - Backend Operation Types
 - Remote backend stores Terraform state and may be used to run operations in Terraform cloud.
 - Terraform Cloud can be used with local operations, in which case only state is stored in the Terraform Cloud backend.
-**Remote Operations:**
   
-When using full remote operations, terraform apply or plan can be executed in Terraform Cloud's run environment, with log output sreaming to the local terminal.
+**Remote Backend for Terraform Cloud:**
+  
+- The remote backend stores Terraform state and may be used to run operations in Terraform Cloud.
+- When using full remote operations, terraform apply or plan can be executed in Terraform Cloud's run environment, with log output streaming to the local terminal.
 ```sh
 terraform {
  cloud {
