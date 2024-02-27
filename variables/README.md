@@ -50,3 +50,16 @@ terraform plan -var-file="file-name.tfvars"
 1. setx TF_VAR_variable_name variable_value (Windows)
 2. export TF_VAR_variable_name="variable_value" (Linux/Mac)
 ```
+## The Order of Precedence
+
+The order of precedence for variable sources is as follows with later sources taking precedence over earlier ones:
+
+1. Environment variables
+
+2. The terraform.tfvars file, if present.
+
+3. The terraform.tfvars.json file, if present.
+
+4. Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
+
+5. Any -var and -var-file options on the command line, in the order they are provided. (Highest Precedence)
