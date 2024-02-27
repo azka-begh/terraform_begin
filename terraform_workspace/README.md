@@ -3,8 +3,12 @@
 - Workspaces allow the use of multiple states with a single configuration directory.
 - Terraform allows us to have multiple workspaces, each with its own set of variables.
 - Terraform workspaces let DevOps teams manage configurations for different environments in a centralized way.
-
-## Terraform workspace vs. Terraform module
+- Not recommended when there needs to be a separate distinction between environments such as staging and production in an org since only state files will be different and not the configuration files.
+- State files are not stored in terraform.tfstate instead they are stored in a separate directory **`terraform.tfstate.d.`**
+- When you create a new workspace, you switch to that workspace by default. Lets say you created more workspaces and want to switch to the first one, in this case you will use switch command.
+- You cannot delete default workspace.
+  
+## Terraform Workspace vs. Terraform Module
 - Terraform workspaces and Terraform modules are two different concepts that serve different purposes in the Terraform ecosystem. 
 - Workspaces allow users to manage different sets of infrastructure using the same configuration by isolating state files. 
 - Modules, on the other hand, are a logical container for multiple resources that are used together, facilitating reusability and better organization of your code.
