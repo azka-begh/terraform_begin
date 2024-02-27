@@ -1,4 +1,5 @@
 # Terraform Import
+[Import](https://www.cloudbolt.io/terraform-best-practices/terraform-import-example/)
 
 **Scenario:**
 - It can happen that all the resources in an organization were created manually.
@@ -14,6 +15,7 @@
 
 **Now:**
 - In the latest versions of Terraform (>=1.5), `import` can automatically create both the state files and the terraform config files for the resources you want to import.
+  x However, you need to write a resource config block manually for the resource, to which the imported object will be mapped. x
 
 
 ## Commands
