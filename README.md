@@ -73,6 +73,13 @@ terraform apply -replace="RESOURCE_TYPE.NAME"
   terraform plan -out=/path/to/file
   terraform apply /path/to/file
   ```
+
+## Terraform Logs
+- Terraform has detailed logs that can be enabled by setting the TF_LOG environment variable to any value.
+- You can set TF_LOG to one of the log levels TRACE, DEBUG, INFO, WARN or ERROR to change the verbosity of the logs.
+- Example: TF_LOG = TRACE
+- To persist logged output, you can set TF_LOG_PATH
+  
 [Useful Blocks and Functions](https://linumary.medium.com/learning-terraform-with-real-world-scenarios-part-2-e5749e8e6f8e)
 
 **References:**
