@@ -15,7 +15,8 @@ Syntax for referencing a registry module is
   
 - They can be recognized by blue badges.
   
-- Module verification is a manual process restricted to trusted HashiCorp partners.these 
+- Module verification is a manual process restricted to trusted HashiCorp partners.
+- Not all modules need to be verified. 
 
 
 ## Using Registry Modules
@@ -27,7 +28,7 @@ module "ec2-instance" {
   version = "2.13.0"
 }
 ```
-
+**Version is an optional argument but it helps set a constraint. The version argument is recommended for modules from a registry but source is mandatory. For local modules, (./ or ../) version is not needed.**
 
 ```sh
 provider "aws" {
