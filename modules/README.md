@@ -1,9 +1,11 @@
 # Modules
 
-* A Terraform module is a collection of standard configuration files in a dedicated directory. 
-* Terraform modules encapsulate groups of resources dedicated to one task, reducing the amount of code you have to develop for similar infrastructure components.
+- A Terraform module is a collection of standard configuration files in a dedicated directory. 
+- Terraform modules encapsulate groups of resources dedicated to one task, reducing the amount of code you have to develop for similar infrastructure components.
+- It is recommended to explicitly constraint the acceptable version numbers for each external module to avoid unexpected or unwanted changes.
+- Version constraints are supported only for modules installed from a module rregistry, such as the Terraform registry or Terraform Cloud;s private module registry.
+- A typical module can look like this:
 ```sh
-A typical module can look like this:
 .
 ├── main.tf
 ├── outputs.tf
